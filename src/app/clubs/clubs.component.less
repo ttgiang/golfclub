@@ -1,0 +1,66 @@
+.result-search {
+    background-color: white;
+    position: relative;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+.info-search {
+    height: 109px;
+    text-align: right;
+    margin-top: 0;
+}
+
+.right-side {
+    display: block;
+    margin: 31px 30px 0 auto;
+}
+
+::ng-deep.search-page {
+    .dx-scheduler {
+        height: 500px;
+    }
+
+    @media screen and (min-width: 768px) {
+        .result-search {
+            .big-padding {
+                padding-right: 158px;
+            }
+        }
+    }
+
+    .footer {
+        border-top: 0;
+    }
+
+    .dx-scheduler-header-panel-cell {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .info-container {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+
+        .info-search {
+            flex-basis: 512px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .info-search {
+        text-align: center;
+        height: auto;
+
+        .right-side {
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 7px;
+            margin-bottom: 20px;
+        }
+    }
+}

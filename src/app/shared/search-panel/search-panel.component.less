@@ -1,0 +1,123 @@
+@accent-color-hover-state: #5ea400;
+@accent-color: #81bd00;
+
+.search-panel {
+    width: 415px;
+    height: 414px;
+    background-color: white;
+    text-align: left;
+    margin-right: 59px;
+
+    .title {
+        font-size: 23px;
+        margin-left: 30px;
+        padding-top: 32px;
+    }
+
+    .dx-button.search {
+        width: 354px;
+        font-size: 18px;
+        margin: 0 auto;
+        margin-top: 40px;
+        display: block;
+    }
+}
+
+.search-form {
+    display: block;
+    margin: 0 auto;
+    margin-top: 28px;
+    width: 354px;
+
+    ::ng-deep.dx-layout-manager {
+        .dx-field-item {
+            &:not(.dx-first-row) {
+                width: 100%;
+                padding-top: 18px;
+            }
+        }
+
+        .search-location {
+            width: 100%;
+        }
+
+        .groupItems.dx-field-item {
+            &:not(.dx-first-col) {
+                margin-left: 6px;
+                padding-left: 0;
+            }
+
+            &:not(.dx-last-col) {
+                padding-right: 0px;
+            }
+        }
+    }
+}
+
+.label {
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    .search-panel {
+        display: block;
+        width: 100%;
+        height: 385px;
+        margin-top: 0;
+
+        > .title {
+            visibility: visible;
+            font-size: 20px;
+            height: auto;
+            font-weight: 300;
+            margin-left: 0;
+            padding: 20px 0 0 0;
+        }
+
+        .dx-button.search {
+            width: 88%;
+            margin-top: 29px;
+        }
+
+        .search-form {
+            text-align: center;
+            margin-top: 22px;
+            width: 88%;
+
+            ::ng-deep.dx-layout-manager {
+                .dx-field-item {
+                    &:not(.dx-first-row) {
+                        padding-top: 7px;
+                    }
+                }
+            }
+
+            ::ng-deep.dx-field-item-label-location-top {
+                margin-bottom: 2px;
+            }
+
+            ::ng-deep.dx-form-group {
+                .dx-form-group-content {
+                    .dx-layout-manager {
+                        .groupItems {
+                            width: 100%;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .search {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .groupItems {
+        width: 170px;
+    }
+}

@@ -1,0 +1,66 @@
+@accent-color: #81bd00;
+
+.info-page {
+    ::ng-deep.dx-scheduler {
+        padding-left: 0;
+        height: 527px;
+        padding-top: 26px;
+    }
+}
+
+.result-search {
+    background-color: white;
+    position: relative;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+.right-side {
+    text-align: right;
+    margin: 20px 30px 0 auto;
+}
+
+.details {
+    font-size: 14px;
+    color: darkgray;
+}
+
+@media screen and (min-width: 768px) {
+    .info-container {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+
+        .info-search {
+            flex-basis: 512px;
+            height: 109px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .info-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .result-search {
+
+            .dx-scheduler {
+                padding: 0 20px 30px 20px;
+            }
+
+    }
+
+    .info-search {
+        text-align: center;
+        height: auto;
+
+        .right-side {
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 7px;
+            margin-bottom: 20px;
+        }
+    }
+}

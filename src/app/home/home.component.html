@@ -1,0 +1,71 @@
+﻿<div
+  class="background-header"
+  [ngStyle]="{
+    'background-image': 'url(./content/home/club1-home-banner.jpg)'
+  }"
+>
+  <div class="top-part">
+    <div class="header-container">
+      <div class="search-container">
+        <search-panel [data]="panel" [adaptOptions]="adaptOptions">
+        </search-panel>
+      </div>
+      <div class="banner">
+        <banner></banner>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="responsive-home">
+  <div>
+    <clubs-list></clubs-list>
+  </div>
+  <div class="info-devextreme">
+    <div>
+      <div class="left-side text-space">
+        <div class="title">Getting Started Today</div>
+        More text here
+        <!-- <p>
+          DevExtreme Subscription includes 65+ High Performance HTML5 JavaScript
+          Widgets.
+        </p>
+        <a target="_blank" href="http://js.devexpress.com/"
+          >Download your free 30-day trial</a
+        > -->
+      </div>
+      <div class="right-side text-space">
+        <p>Some text here:</p>
+        <div class="widgets">
+          <div class="left-side text-space">
+            A<br />
+            B<br />
+            <!-- <a
+              target="_blank"
+              href="https://js.devexpress.com/Demos/WidgetsGallery/Demo/Scheduler/Overview/Angular/Light/"
+              >dxScheduler</a
+            >
+            <a
+              target="_blank"
+              href="https://js.devexpress.com/Demos/WidgetsGallery/Demo/Popup/Overview/Angular/Light/"
+              >dxPopup</a
+            > -->
+          </div>
+          <div class="right-side text-space">
+            C<br />
+            D<br />
+            <!-- <a
+              target="_blank"
+              href="https://js.devexpress.com/Demos/WidgetsGallery/Demo/Form/Overview/Angular/Light/"
+              >dxForm</a
+            >
+            <a
+              target="_blank"
+              href="https://js.devexpress.com/Demos/WidgetsGallery/Demo/Button/PredefinedTypes/Angular/Light/"
+              >dxButton</a
+            > -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
