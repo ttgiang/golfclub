@@ -1,4 +1,5 @@
-﻿import { Injectable } from "@angular/core";
+﻿import { environment } from "./../environments/environment";
+import { Injectable } from "@angular/core";
 import odata from "devextreme/data/odata/store";
 
 // ttgiang - see docs offer.txt
@@ -36,15 +37,22 @@ const offerData = [
 
 @Injectable()
 export class OfferService {
-  store: any = new odata({
-    url: "https://js.devexpress.com/Demos/GolfClub/odata/Clubs/OfferOfTheDay",
-    beforeSend: function (e: any) {
-      e.method = "POST";
-    },
-  });
+  store: any;
+
   getOffer() {
-    let thanh = true;
-    if (thanh) return offerData[0];
-    else return this.store.load();
+    if (environment.thanh) {
+      console.log("[banner.service.thanh.true]", environment.thanh);
+      return offerData[0];
+    } else {
+      console.log("[banner.service.thanh.false]", environment.thanh);
+      this.store = new odata({
+        url:
+          "https://js.devexpress.com/Demos/GolfClub/odata/Clubs/OfferOfTheDay",
+        beforeSend: function (e: any) {
+          e.method = "POST";
+        },
+      });
+      return this.store.load();
+    }
   }
 }
