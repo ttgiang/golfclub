@@ -28,12 +28,10 @@ export class BannerComponent {
 
     // ttgiang - see docs offer.txt
     if (environment.thanh) {
-      console.log("[banner.thanh.true]", environment.thanh);
       that.offer = offer;
       that.name = offer.Name;
       that.dataLoaded.emit(true);
     } else {
-      console.log("[banner.thanh.false]", environment.thanh);
       offer.done(function (data: any) {
         that.offer = data;
         that.name = data.Name;
