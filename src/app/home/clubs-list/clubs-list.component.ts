@@ -1,4 +1,5 @@
-﻿import { Component } from "@angular/core";
+﻿import { environment } from "../../../environments/environment";
+import { Component } from "@angular/core";
 import { ClubsService } from "../../clubs.service";
 import { Router } from "@angular/router";
 import { DatePipe } from "@angular/common";
@@ -22,11 +23,15 @@ export class ClubsComponent {
     private datePipe: DatePipe
   ) {
     let that = this;
-    this.clubsService.getClubs().done(function (data: any) {
-      console.log("[ClubsComponent]", data);
-      that.clubs = data;
+    if (environment.thanh) {
+      that.clubs = this.clubsService.getClubs();
       that.loadingData = false;
-    });
+    } else {
+      this.clubsService.getClubs().done(function (data: any) {
+        that.clubs = data;
+        that.loadingData = false;
+      });
+    }
   }
   keyPress(e: any, club: any) {
     if (e.code === "Enter") {

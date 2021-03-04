@@ -1,4 +1,5 @@
-﻿import { Component, Output, EventEmitter } from "@angular/core";
+﻿import { environment } from "../../../environments/environment";
+import { Component, Output, EventEmitter } from "@angular/core";
 import { OfferService } from "../../offer.service";
 import { Router } from "@angular/router";
 import { DatePipe } from "@angular/common";
@@ -26,8 +27,7 @@ export class BannerComponent {
       offer: any = this.offerService.getOffer();
 
     // ttgiang - see docs offer.txt
-    let thanh = true;
-    if (thanh) {
+    if (environment.thanh) {
       that.offer = offer;
       that.name = offer.Name;
       that.dataLoaded.emit(true);
